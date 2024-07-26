@@ -8,5 +8,11 @@
     <p>Price: <%= listing.price %></p>
     <p>Location: <%= listing.location %></p>
     <p>Country: <%= listing.country %></p>
+    <form method="get" action="/listings/<%= listing._id %>/edit" style="display:inline;">
+        <button>Edit</button>
+    </form>
+    <form method="post" action="/listings/<%= listing._id %>?_method=DELETE" style="display:inline;">
+        <button>Delete</button>
+    </form>
     <a href="/listings">Back to Listings</a>
 </body>

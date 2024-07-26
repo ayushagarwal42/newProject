@@ -9,12 +9,6 @@
         <%for(let listing of listings ){%>
             <li>
                 <a href="/listings/<%=listing._id%>"><%=listing.title%></a>
-                <form method="get" action="/listings/<%= listing._id %>/edit" style="display:inline;">
-                    <button>Edit</button>
-                </form>
-                <form method="post" action="/listings/<%= listing._id %>?_method=DELETE" style="display:inline;">
-                    <button>Delete</button>
-                </form>
             </li>
         <%}%>
     </ol>
